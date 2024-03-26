@@ -49,8 +49,6 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
 VERILOG CODE
-
-   ```
 # encoder
 ```
 module encoder(d,a,b,c) ;
