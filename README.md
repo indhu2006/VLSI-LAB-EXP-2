@@ -131,15 +131,25 @@ endmodule
 
 OUTPUT WAVEFORM
 ENCODER
+
 ![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/77752b00-9efb-41bd-ae45-83d07327a10c)
+
 DECODER
+
 ![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/d582a5de-9fa9-4065-ae10-fc8352b48f16)
+
 MULTIPLIXER
+
 ![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/01043dc5-ac24-450f-96ee-5a95993889fd)
+
 DEMULTIPLIXER
+
 ![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/c33142b6-1c03-4938-9437-6a37202836b8)
+
 MAGNITUDE COMPARATOR
+
 ![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/22d26c6f-9013-4547-b73d-31965cabc230)
+
 
 RESULT
  Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR are simulated and synthesised using Xilinx ISE
