@@ -1,43 +1,14 @@
 SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
 
-AIM: 
+## AIM: 
 
  To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using vivado2023.2 Spartan6=7 FPGA.
  
 
-APPARATUS REQUIRED:
+## APPARATUS REQUIRED:
 
 vivado 2023.2 Spartan6=7 FPGA
-
-**LOGIC DIAGRAM**
-
-ENCODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
-
-
-DECODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
-
-
-MULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
-
-
-DEMULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
-
-
-MAGNITUDE COMPARATOR
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
-
-
-  
-PROCEDURE:
+## PROCEDURE:
 STEP:1 Start the vivado software, Select and Name the New project.
 
 STEP:2 Select the device family, device, package and speed.
@@ -54,7 +25,13 @@ STEP:7 compare the output with truth table.
 
 
 VERILOG CODE
-# encoder
+
+## LOGIC DIAGRAM
+
+ENCODER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
+## VERILOG CODE
 module encoder(d,a,b,c);
 
 input [7:0]d;
@@ -68,7 +45,15 @@ or (b,d[2],d[3],d[6],d[7]);
 or (c,d[1],d[3],d[5],d[7]);
 
 endmodule
-# decoder
+## OUTPUT
+
+![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/423c0743-d169-4b0e-a7b2-7f3b6c0464e7)
+
+
+DECODER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
+## VERILOG CODE
 module decoder_2_4(A,E,Y);
 
 input [1:0]A;
@@ -98,7 +83,15 @@ decoder_2_4 d1(A[1:0],~A[2],Y[3:0]);
 decoder_2_4 d2(A[1:0],~A[2],Y[7:4]);
 
 Endmodule
-# multiplexer
+## OUTPUT
+
+![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/2a9819b5-9bbb-4f26-b1c7-30336a3c3ec7)
+
+
+MULTIPLEXER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
+## VERILOG CODE
 module mux(i,s,y);
 
 input [7:0]i;
@@ -135,7 +128,15 @@ end
 
 Endmodule
 
-# demultiplexer
+## OUTPUT:
+
+![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/cad06add-0c97-4081-a54d-34a2954ed92c)
+
+
+DEMULTIPLEXER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
+## VERILOG CODE
 module Demux1to8(d1,d2,d3,d4,d5,d6,d7,d8,i,s0,s1,s2);
 
 input i,s0,s1,s2;
@@ -167,9 +168,15 @@ and g10(d7,s0,s1,w3,i);
 and g11(d8,s0,s1,s2,i);
 
 endmodule
+## OUTPUT
 
-# magnitude comparator
+![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/1919bea3-f9b7-4cd8-b339-7bde5726b02f)
 
+
+MAGNITUDE COMPARATOR
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
+## VERILOG CODE
 module mag(a,b,gt,it,eq);
 
 input [3:0]a,b;
@@ -217,30 +224,10 @@ eq = 1'b1;
 end
 
 end
+## OUTPUT
 
+![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/3e67e0c6-ff75-4829-b4ed-bbb97a448d98)
 
-OUTPUT WAVEFORM
-ENCODER
-![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/05962899-8267-4d0d-93e2-39f11b681b1e)
-
-
-DECODER
-
-![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/a23d9344-4e14-4f96-ba00-e8759e44759a)
-
-MULTIPLIXER
-
-![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/dbec2fcc-a20b-4110-bebe-594bfec27a2b)
-
-
-DEMULTIPLIXER
-![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/0cb721c9-ddf4-4725-931a-13d66e7b96cf)
-
-
-MAGNITUDE COMPARATOR
-![image](https://github.com/indhu2006/VLSI-LAB-EXP-2/assets/164912740/13d90ff2-0974-4ce0-b753-d7ec8f9cd0c7)
-
-
-RESULT
+## RESULT
 Thus the simulation and synthesis of ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, 2bit MAGNITUDE COMPARATOR using vivado 2023.2 is successfully compelted and executed.
  
